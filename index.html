@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>An Phát Việt — Giải pháp kho vận &amp; lưu giữ hóa chất</title>
+<meta name="description" content="Công ty TNHH Dịch vụ Kho vận An Phát Việt cung cấp giải pháp kho bãi, lưu giữ và quản lý hàng hóa, hóa chất công nghiệp. An toàn – Chuyên nghiệp – Hiệu quả.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#171B1E;
+    --concrete:#EDE9E1;
+    --paper:#F8F6F2;
+    --steel:#3E5871;
+    --steel-dim:#7C8FA0;
+    --amber:#D98A2E;
+    --amber-dark:#B76F1C;
+    --line:#CBC4B4;
+    --text-soft:#565049;
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+  body{
+    margin:0;
+    background:var(--concrete);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Be Vietnam Pro',sans-serif;
+    font-weight:700;
+    line-height:1.3;
+    margin:0;
+    color:var(--ink);
+    letter-spacing:0.2px;
+  }
+  a{color:inherit;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 28px;}
+  :focus-visible{outline:3px solid var(--amber); outline-offset:3px;}
+
+  /* ---------- Header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:20;
+    background:rgba(237,233,225,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 28px; max-width:1140px; margin:0 auto;
+  }
+  .logo{
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:700; font-size:24px; letter-spacing:0.5px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .logo .mark{width:14px;height:14px;background:var(--amber);border-radius:1px;flex:none;}
+  .nav-links{display:flex; gap:28px; font-size:15px; font-weight:500;}
+  .nav-links a{text-decoration:none; color:var(--text-soft);}
+  .nav-links a:hover{color:var(--ink);}
+  .hotline{
+    font-size:15px; font-weight:600; color:var(--ink);
+    display:flex; align-items:center; gap:8px; white-space:nowrap;
+  }
+  .hotline .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);flex:none;}
+  @media (max-width:820px){ .nav-links{display:none;} }
+
+  /* ---------- Hero ---------- */
+  .hero{padding:64px 0 20px;}
+  .hero-grid{
+    display:grid; grid-template-columns:1.05fr 0.95fr; gap:40px; align-items:center;
+  }
+  .eyebrow-line{
+    display:flex; align-items:center; gap:10px; margin-bottom:18px;
+    font-size:14px; color:var(--steel); font-weight:600;
+  }
+  .eyebrow-line::before{content:"";width:28px;height:2px;background:var(--amber);}
+  .hero h1{font-size:clamp(38px,5.4vw,64px); max-width:11ch;}
+  .hero p.lede{
+    margin:22px 0 30px; font-size:18px; color:var(--text-soft); max-width:46ch;
+  }
+  .cta-row{display:flex; align-items:center; gap:22px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--amber); color:#fff; text-decoration:none;
+    padding:14px 26px; font-weight:600; font-size:15.5px;
+    border-radius:var(--radius); border:none; cursor:pointer;
+    transition:background 0.15s ease;
+  }
+  .btn:hover{background:var(--amber-dark);}
+  .btn.ghost{
+    background:transparent; color:var(--ink); border:1.5px solid var(--ink);
+  }
+  .btn.ghost:hover{background:var(--ink); color:var(--paper);}
+  .contact-inline{font-size:15px; color:var(--text-soft);}
+  .contact-inline strong{color:var(--ink);}
+
+  .rack-art{position:relative;}
+  .rack-caption{
+    margin-top:10px; font-size:12.5px; color:var(--steel-dim); text-align:right;
+  }
+
+  /* ---------- Benefits ---------- */
+  .benefits{
+    padding:70px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    background:var(--paper);
+  }
+  .benefits-grid{
+    display:grid; grid-template-columns:1fr 1px 1fr; gap:48px; align-items:start;
+  }
+  .benefits-grid .divider{background:var(--line);}
+  .benefit h3{font-size:26px; margin-bottom:10px; display:flex; align-items:center; gap:12px;}
+  .benefit p{color:var(--text-soft); font-size:15.5px; max-width:42ch;}
+  .icon-line{color:var(--steel); flex:none;}
+  @media (max-width:760px){
+    .benefits-grid{grid-template-columns:1fr; gap:36px;}
+    .benefits-grid .divider{display:none;}
+  }
+
+  /* ---------- Features: shelf tiers ---------- */
+  .features{padding:76px 0;}
+  .section-head{max-width:56ch; margin-bottom:44px;}
+  .section-head .eyebrow-line{margin-bottom:14px;}
+  .section-head h2{font-size:clamp(30px,3.6vw,42px);}
+  .tier{
+    display:grid; grid-template-columns:120px 1fr; gap:28px;
+    padding:26px 0; border-top:1px solid var(--line);
+    align-items:start;
+  }
+  .tier:last-child{border-bottom:1px solid var(--line);}
+  .tier-label{
+    font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:15px;
+    color:var(--steel); padding-top:3px;
+  }
+  .tier-label span{display:block; font-size:12px; color:var(--steel-dim); font-weight:500; margin-top:2px;}
+  .tier-body h3{font-size:21px; margin-bottom:8px; font-weight:600;}
+  .tier-body p{color:var(--text-soft); font-size:15px; max-width:64ch;}
+  .tier-body ul{margin:10px 0 0; padding-left:18px; color:var(--text-soft); font-size:15px;}
+  .tier-body li{margin-bottom:5px;}
+  @media (max-width:640px){
+    .tier{grid-template-columns:1fr; gap:8px;}
+  }
+
+  /* ---------- Process ---------- */
+  .process{
+    padding:76px 0; background:var(--ink); color:var(--paper);
+  }
+  .process .section-head h2{color:var(--paper);}
+  .process .section-head p{color:#B9BFC5;}
+  .process .eyebrow-line{color:var(--amber);}
+  .process .eyebrow-line::before{background:var(--amber);}
+  .flow{
+    display:grid; grid-template-columns:1fr auto 1fr auto 1fr; gap:0; align-items:stretch;
+  }
+  .step{
+    background:#20262B; border:1px solid #303840; padding:26px 22px; border-radius:var(--radius);
+  }
+  .step .num{
+    font-family:'Barlow Condensed',sans-serif; font-size:15px; color:var(--amber); font-weight:600; margin-bottom:10px;
+  }
+  .step h3{font-size:20px; color:#fff; margin-bottom:10px;}
+  .step p{font-size:14.5px; color:#AEB5BB; margin:0;}
+  .arrow{
+    display:flex; align-items:center; justify-content:center; color:var(--steel-dim); padding:0 10px;
+  }
+  @media (max-width:820px){
+    .flow{grid-template-columns:1fr; gap:14px;}
+    .arrow{transform:rotate(90deg); padding:4px 0;}
+  }
+
+  /* ---------- Trust strip ---------- */
+  .trust{padding:60px 0; border-bottom:1px solid var(--line);}
+  .trust-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:36px;}
+  .trust-item{border-left:2px solid var(--amber); padding-left:18px;}
+  .trust-item h3{font-size:22px; margin-bottom:8px; font-weight:600;}
+  .trust-item p{color:var(--text-soft); font-size:14.5px; margin:0;}
+  @media (max-width:760px){ .trust-grid{grid-template-columns:1fr; gap:24px;} }
+
+  /* ---------- Contact / Footer ---------- */
+  .contact{padding:80px 0; text-align:left;}
+  .contact-card{
+    background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);
+    padding:48px; display:grid; grid-template-columns:1.2fr 1fr; gap:40px; align-items:center;
+  }
+  .contact-card h2{font-size:clamp(28px,3.4vw,38px); margin-bottom:14px;}
+  .contact-card p{color:var(--text-soft); font-size:15.5px; max-width:44ch;}
+  .contact-details{border-left:1px solid var(--line); padding-left:36px;}
+  .contact-details .row{margin-bottom:16px; font-size:15px;}
+  .contact-details .row .label{display:block; color:var(--steel-dim); font-size:12.5px; margin-bottom:3px;}
+  .contact-details .row .value{font-weight:600; font-size:17px;}
+  @media (max-width:760px){
+    .contact-card{grid-template-columns:1fr; padding:32px;}
+    .contact-details{border-left:none; padding-left:0; border-top:1px solid var(--line); padding-top:24px;}
+  }
+  footer.site-footer{
+    padding:26px 0 40px; font-size:13.5px; color:var(--steel-dim);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+
+  /* An Phat Viet: expanded company content */
+  section[id]{scroll-margin-top:100px;}
+  .logo{text-decoration:none;}
+  .nav{gap:20px;flex-wrap:wrap;}
+  .nav-links{gap:20px;flex-wrap:wrap;}
+  .hero h1{max-width:none;}
+  .hero h1 span{display:block;font-size:.62em;line-height:1.16;color:var(--steel);margin-top:16px;}
+  .hero .eyebrow-line{font-size:12px;line-height:1.6;}
+  .apv-copy{max-width:82ch;color:var(--text-soft);font-size:16px;}
+  .apv-copy strong{color:var(--ink);}
+  .apv-two{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .apv-two p:first-child{margin-top:0;}
+  .apv-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 30px;padding-left:22px;color:var(--text-soft);margin:24px 0;}
+  .apv-list li{padding-left:4px;}
+  .apv-list li::marker{color:var(--amber);}
+  .apv-two .apv-list{grid-template-columns:1fr;margin-top:0;}
+  .apv-note{padding:20px 24px;border-left:3px solid var(--amber);background:var(--paper);color:var(--text-soft);margin:28px 0 0;}
+  .apv-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;list-style:none;padding:0;margin:30px 0 0;}
+  .apv-process-intro{color:#B9BFC5;max-width:70ch;}
+  .apv-chain{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:0;list-style:none;margin:28px 0;}
+  .apv-chain li{border:1px solid var(--line);padding:16px;font-weight:600;}
+  .apv-chain span{color:var(--steel);display:block;font-size:12px;margin-bottom:4px;}
+  .apv-core{border-top:1px solid var(--line);padding-top:32px;margin-top:36px;color:var(--text-soft);}
+  .apv-core h3{font-size:26px;}
+  .apv-core .display{font-size:clamp(22px,3vw,30px);line-height:1.4;color:var(--steel);}
+  .contact-details{min-width:0;overflow-wrap:anywhere;}
+  footer.site-footer{padding-left:28px;padding-right:28px;}
+  @media(max-width:820px){.nav-links{display:flex;font-size:13px;gap:12px 18px;}.hero-grid,.apv-two{grid-template-columns:1fr;}.apv-steps{grid-template-columns:repeat(2,minmax(0,1fr));}.hero{padding-top:40px;}}
+  @media(max-width:540px){.nav{padding:14px 20px;}.wrap{padding-left:20px;padding-right:20px;}.apv-list,.apv-steps,.apv-chain{grid-template-columns:1fr;}.contact-card{padding:24px;}.features,.process,.benefits{padding-top:48px;padding-bottom:48px;}}
+
+  /* Typography and visual hierarchy */
+  :root{--ink:#142e42;--concrete:#f1f4f5;--paper:#ffffff;--steel:#33566e;--steel-dim:#607587;--amber:#b86618;--amber-dark:#914a0e;--line:#d9e2e7;--text-soft:#475967;--radius:10px;}
+  body{line-height:1.75;}
+  h1,h2,h3,.display,.logo,.tier-label,.step .num{font-family:'Be Vietnam Pro',sans-serif;letter-spacing:-.025em;}
+  header.site{background:rgba(255,255,255,.96);box-shadow:0 4px 18px rgba(20,46,66,.04);}
+  .logo{font-size:20px;line-height:1.4;font-weight:800;}
+  .logo .mark{height:24px;width:6px;border-radius:3px;}
+  .nav-links{font-size:14px;}
+  .hero{padding:76px 0 64px;background:linear-gradient(135deg,#e7eef2 0%,#f8fafb 70%);}
+  .hero h1{font-size:clamp(34px,4.6vw,54px);line-height:1.2;font-weight:800;}
+  .hero h1 span{font-size:.58em;line-height:1.5;color:var(--amber-dark);}
+  .hero p.lede{font-size:17px;line-height:1.85;}
+  .eyebrow-line{text-transform:uppercase;font-size:12px;letter-spacing:.06em;}
+  .hero .eyebrow-line{max-width:52ch;}
+  .section-head{max-width:820px;margin-bottom:30px;}
+  .section-head h2{font-size:clamp(26px,3.1vw,36px);line-height:1.35;}
+  .apv-copy{font-size:16px;line-height:1.85;}
+  .apv-copy p{margin:0 0 18px;}
+  .apv-list{font-size:15px;line-height:1.8;}
+  .apv-list li{padding-top:8px;padding-bottom:8px;border-bottom:1px solid var(--line);}
+  .apv-note{border-radius:0 10px 10px 0;font-size:14px;line-height:1.8;}
+  .step{background:#1c3a50;border-color:#365267;padding:28px;border-radius:12px;}
+  .step .num{font-size:28px;color:#ffbd74;font-weight:700;margin-bottom:20px;}
+  .step h3{font-size:18px;line-height:1.5;}
+  .step p,.apv-process-intro{color:#d1dee6;line-height:1.85;}
+  .process .eyebrow-line{color:#ffbd74;}
+  .process .eyebrow-line::before{background:#ffbd74;}
+  .apv-chain li{background:#f4f7f9;border-radius:10px;padding:20px;font-size:15px;}
+  .apv-chain span{color:var(--amber-dark);font-weight:700;}
+  .tier{grid-template-columns:80px 1fr;gap:24px;padding:28px 0;}
+  .tier-label{font-size:24px;color:var(--amber-dark);}
+  .tier-label span{font-size:10px;letter-spacing:0;}
+  .tier-body h3{font-size:20px;line-height:1.5;font-weight:700;}
+  .tier-body p{max-width:82ch;font-size:15.5px;line-height:1.85;margin-bottom:0;}
+  .benefit h3,.apv-core h3{font-size:24px;line-height:1.4;}
+  .benefit p{max-width:none;line-height:1.85;}
+  .apv-core .display{font-size:clamp(18px,2.1vw,25px);line-height:1.8;letter-spacing:0;}
+  .contact-card{box-shadow:0 14px 45px rgba(20,46,66,.06);}
+  .contact-card h2{font-size:clamp(26px,3vw,34px);line-height:1.4;}
+  .contact-details .row .value{font-size:15px;line-height:1.7;}
+  .rack-art{padding:18px;border:1px solid #d3dfe6;border-radius:16px;background:rgba(255,255,255,.65);}
+  .rack-caption{color:var(--steel-dim);font-size:11px;}
+  .btn{font-size:14px;padding:13px 20px;}
+  @media(max-width:640px){.tier{grid-template-columns:1fr;gap:12px;}.tier-label span{display:none;}.hero{padding:40px 0;}.nav-links{width:100%;font-size:12px;}.nav{gap:12px;}.step{padding:22px;}.apv-copy{font-size:15px;}.hero-grid{gap:28px;}}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="logo" href="#home" aria-label="An Phát Việt — Trang đầu"><span class="mark"></span>AN PHÁT VIỆT</a>
+    <nav class="nav-links" aria-label="Điều hướng chính">
+      <a href="#about">Giới thiệu</a><a href="#features">Dịch vụ</a><a href="#chemical">Kho hóa chất</a><a href="#process">Quy trình</a><a href="#contact">Liên hệ</a>
+    </nav>
+  </div>
+</header>
+<main id="home">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow-line">CÔNG TY TNHH DỊCH VỤ KHO VẬN AN PHÁT VIỆT</div>
+      <h1>Giải pháp kho vận<br><span>An toàn – Chuyên nghiệp – Hiệu quả</span></h1>
+      <p class="lede">Giải pháp kho bãi, lưu giữ và quản lý hàng hóa cho doanh nghiệp. Đồng hành từ tiếp nhận đến xuất kho, phù hợp với đặc tính hàng hóa và nhu cầu vận hành.</p>
+      <div class="cta-row"><a class="btn" href="#contact">Trao đổi nhu cầu lưu kho</a><a class="btn ghost" href="#features">Khám phá dịch vụ</a></div>
+    </div>
+    <div class="rack-art">
+      <svg viewBox="0 0 460 380" width="100%" role="img" aria-label="Minh họa kệ kho hàng nhiều tầng">
+        <rect x="0" y="0" width="460" height="380" fill="none"/>
+        <!-- posts -->
+        <rect x="40" y="30" width="10" height="320" fill="#3E5871"/>
+        <rect x="410" y="30" width="10" height="320" fill="#3E5871"/>
+        <rect x="220" y="30" width="8" height="320" fill="#7C8FA0"/>
+        <!-- beams (3 levels) -->
+        <g stroke="#3E5871" stroke-width="8">
+          <line x1="40" y1="90"  x2="420" y2="90"/>
+          <line x1="40" y1="190" x2="420" y2="190"/>
+          <line x1="40" y1="290" x2="420" y2="290"/>
+          <line x1="40" y1="350" x2="420" y2="350"/>
+        </g>
+        <!-- boxes level 1 -->
+        <rect x="58"  y="34" width="66" height="52" fill="#D98A2E"/>
+        <rect x="140" y="40" width="58" height="46" fill="#F8F6F2" stroke="#CBC4B4"/>
+        <rect x="244" y="36" width="70" height="50" fill="#F8F6F2" stroke="#CBC4B4"/>
+        <rect x="330" y="42" width="60" height="44" fill="#3E5871"/>
+        <!-- boxes level 2 -->
+        <rect x="58"  y="134" width="70" height="52" fill="#F8F6F2" stroke="#CBC4B4"/>
+        <rect x="148" y="138" width="58" height="48" fill="#3E5871"/>
+        <rect x="244" y="132" width="66" height="54" fill="#F8F6F2" stroke="#CBC4B4"/>
+        <rect x="336" y="140" width="58" height="46" fill="#D98A2E"/>
+        <!-- boxes level 3 -->
+        <rect x="58"  y="234" width="60" height="52" fill="#3E5871"/>
+        <rect x="140" y="236" width="66" height="50" fill="#F8F6F2" stroke="#CBC4B4"/>
+        <rect x="244" y="230" width="58" height="56" fill="#F8F6F2" stroke="#CBC4B4"/>
+        <rect x="326" y="238" width="70" height="48" fill="#F8F6F2" stroke="#CBC4B4"/>
+        <!-- floor + forklift silhouette -->
+        <rect x="0" y="358" width="460" height="4" fill="#CBC4B4"/>
+        <g transform="translate(70,320)">
+          <rect x="0" y="16" width="46" height="18" rx="2" fill="#171B1E"/>
+          <rect x="10" y="-6" width="14" height="24" fill="#171B1E"/>
+          <circle cx="10" cy="36" r="8" fill="#171B1E"/>
+          <circle cx="38" cy="36" r="8" fill="#171B1E"/>
+        </g>
+      </svg>
+      <div class="rack-caption">Hình minh họa — bố trí thực tế tùy phương án lưu kho</div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="about">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow-line">Về An Phát Việt</div><h2>Đối tác kho vận đồng hành cùng doanh nghiệp</h2></div>
+    <div class="apv-copy">
+      <p><strong>CÔNG TY TNHH DỊCH VỤ KHO VẬN AN PHÁT VIỆT</strong> là đơn vị cung cấp các giải pháp kho bãi, lưu giữ và quản lý hàng hóa, đồng hành cùng doanh nghiệp trong quá trình tổ chức, vận hành và tối ưu chuỗi cung ứng.</p>
+      <p>Với định hướng phát triển dịch vụ kho vận chuyên nghiệp, An Phát Việt không chỉ đáp ứng nhu cầu về diện tích lưu trữ, mà còn chú trọng đến toàn bộ quá trình <strong>tiếp nhận – kiểm soát – phân loại – lưu giữ – xuất kho</strong> nhằm bảo đảm hàng hóa được quản lý khoa học, an toàn và phù hợp với đặc tính của từng loại sản phẩm.</p>
+      <p>Đặc biệt, đối với các loại hóa chất công nghiệp và hàng hóa có yêu cầu cao về điều kiện bảo quản, an toàn và kiểm soát rủi ro, An Phát Việt xây dựng phương thức quản lý phù hợp với đặc tính hàng hóa, hồ sơ kỹ thuật và yêu cầu lưu giữ của từng khách hàng.</p>
+      <p>Mục tiêu của chúng tôi là trở thành đối tác kho vận tin cậy, giúp doanh nghiệp chủ động hơn trong quản lý hàng hóa, tối ưu nguồn lực và nâng cao hiệu quả vận hành.</p>
+    </div>
+  </div>
+</section>
+
+<section class="benefits" id="features">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow-line">Dịch vụ của chúng tôi</div><h2>Kho bãi &amp; lưu giữ hàng hóa</h2></div>
+    <div class="apv-two">
+      <div class="apv-copy"><p>An Phát Việt cung cấp giải pháp lưu giữ linh hoạt, đáp ứng nhu cầu <strong>ngắn hạn, dài hạn hoặc theo từng lô hàng</strong> của doanh nghiệp.</p><p>Các dịch vụ được triển khai theo nhu cầu thực tế, với quy trình quản lý khoa học, minh bạch và dễ kiểm soát, giúp doanh nghiệp chủ động theo dõi hàng hóa trong suốt thời gian lưu kho.</p></div>
+      <ul class="apv-list"><li>Lưu giữ và quản lý hàng hóa tại kho.</li>
+<li>Tiếp nhận, kiểm đếm hàng hóa khi nhập kho.</li>
+<li>Phân khu, sắp xếp và quản lý vị trí hàng hóa.</li>
+<li>Theo dõi nhập – xuất – tồn theo từng lô hàng.</li>
+<li>Bốc xếp, hỗ trợ nhập và xuất kho.</li>
+<li>Hỗ trợ đóng gói, sắp xếp hàng hóa theo yêu cầu phù hợp.</li>
+<li>Điều phối hàng hóa và hỗ trợ kết nối với đơn vị vận chuyển.</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="chemical">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow-line">Hóa chất &amp; hàng hóa yêu cầu an toàn</div><h2>An toàn bắt đầu từ khâu tiếp nhận</h2></div>
+    <div class="apv-copy">
+      <p>Đối với hóa chất và hàng hóa có tính chất đặc thù, lưu kho không đơn thuần là việc bố trí một vị trí để hàng hóa. <strong>Điều quan trọng là phải hiểu rõ hàng hóa trước khi đưa vào kho.</strong></p>
+      <p>An Phát Việt định hướng kiểm soát thông tin hàng hóa ngay từ khâu tiếp nhận, trên cơ sở các thông tin cần thiết dưới đây.</p>
+    </div>
+    <ul class="apv-list"><li>Tên và chủng loại hàng hóa/hóa chất.</li>
+<li>Mã CAS đối với hóa chất.</li>
+<li>Đặc tính và mức độ nguy hiểm.</li>
+<li>Phiếu an toàn hóa chất (SDS).</li>
+<li>Điều kiện bảo quản.</li>
+<li>Quy cách và tình trạng bao bì.</li>
+<li>Yêu cầu về nhiệt độ, độ ẩm, thông gió nếu có.</li>
+<li>Yêu cầu phân khu và khả năng tương thích khi lưu giữ.</li>
+<li>Các yêu cầu liên quan đến PCCC và ứng phó sự cố.</li></ul>
+    <div class="apv-copy"><p>Trên cơ sở đó, hàng hóa được xem xét để phân loại, bố trí và quản lý phù hợp, góp phần hạn chế các rủi ro như rò rỉ, tràn đổ, cháy nổ hoặc phản ứng giữa những loại hóa chất không tương thích.</p></div>
+    <p class="apv-note"><strong>Phạm vi tiếp nhận:</strong> Việc tiếp nhận và lưu giữ hàng hóa được thực hiện trong phạm vi điều kiện, năng lực và quy định pháp luật áp dụng đối với từng loại hàng hóa.</p>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow-line">Kiểm soát xuyên suốt tại kho</div><h2>Quy trình lưu giữ hàng hóa</h2></div>
+    <p class="apv-process-intro">An Phát Việt xây dựng quy trình quản lý kho theo hướng kiểm soát xuyên suốt vòng đời của hàng hóa tại kho.</p>
+    <ol class="apv-steps">
+      <li class="step"><div class="num">01</div><h3>Tiếp nhận thông tin</h3><p>Tiếp nhận thông tin về chủng loại, số lượng, quy cách đóng gói, đặc tính hàng hóa và yêu cầu bảo quản từ khách hàng.</p></li>
+<li class="step"><div class="num">02</div><h3>Kiểm tra &amp; đối chiếu</h3><p>Kiểm tra tình trạng hàng hóa, bao bì, nhãn, số lượng, chủng loại và hồ sơ liên quan trước khi nhập kho.</p></li>
+<li class="step"><div class="num">03</div><h3>Phân loại &amp; bố trí</h3><p>Xác định khu vực lưu giữ phù hợp dựa trên đặc tính hàng hóa, yêu cầu bảo quản và nguyên tắc an toàn trong vận hành kho.</p></li>
+<li class="step"><div class="num">04</div><h3>Quản lý &amp; theo dõi</h3><p>Theo dõi tình trạng nhập – xuất – tồn, số lượng và thông tin lô hàng trong suốt quá trình lưu kho.</p></li>
+<li class="step"><div class="num">05</div><h3>Kiểm soát xuất kho</h3><p>Thực hiện xuất hàng theo yêu cầu và chứng từ hợp lệ của khách hàng, kiểm soát đúng chủng loại – đúng số lượng – đúng lô hàng.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="features" id="safety">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow-line">Nguyên tắc vận hành</div><h2>An toàn – nền tảng trong vận hành kho</h2></div>
+    <div class="apv-copy">
+      <p>Đối với An Phát Việt, <strong>an toàn không phải là một công đoạn riêng biệt mà là nguyên tắc xuyên suốt trong toàn bộ hoạt động kho vận.</strong></p>
+      <p>Từ khi hàng hóa được tiếp nhận cho đến khi xuất kho, các yếu tố về con người, hàng hóa, thiết bị và môi trường làm việc đều cần được kiểm soát phù hợp.</p>
+      <p>An Phát Việt chú trọng:</p>
+    </div>
+    <ul class="apv-list"><li>Kiểm soát hàng hóa trước khi nhập kho.</li>
+<li>Bố trí hàng hóa theo khu vực phù hợp.</li>
+<li>Kiểm soát nguồn nhiệt và các yếu tố có nguy cơ gây cháy.</li>
+<li>Duy trì lối đi và khu vực thao tác an toàn.</li>
+<li>Kiểm tra tình trạng bao bì, pallet và khu vực lưu giữ.</li>
+<li>Sử dụng phương tiện, thiết bị an toàn phù hợp với phạm vi hoạt động.</li>
+<li>Chủ động chuẩn bị phương án xử lý khi phát sinh tình huống bất thường.</li>
+<li>Nâng cao nhận thức và trách nhiệm an toàn của đội ngũ nhân sự.</li></ul>
+    <p class="apv-note">Mục tiêu là xây dựng một môi trường kho vận an toàn, có tổ chức và có khả năng kiểm soát rủi ro trong từng khâu vận hành.</p>
+  </div>
+</section>
+
+<section class="benefits" id="solutions">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow-line">Kết nối hoạt động kho vận</div><h2>Không chỉ là kho – mà là giải pháp kho vận</h2></div>
+    <div class="apv-copy">
+      <p>An Phát Việt hướng tới mô hình dịch vụ trong đó doanh nghiệp không chỉ thuê một vị trí để lưu hàng, mà có thể tập trung vào hoạt động kinh doanh cốt lõi, trong khi công tác lưu giữ và vận hành hàng hóa được tổ chức bởi đơn vị kho vận.</p>
+      <p>Tùy theo nhu cầu, giải pháp có thể được kết nối theo chuỗi:</p>
+    </div>
+    <ol class="apv-chain" aria-label="Chuỗi dịch vụ kho vận"><li><span>01</span>Lưu kho</li><li><span>02</span>Bốc xếp</li><li><span>03</span>Quản lý hàng hóa</li><li><span>04</span>Đóng gói</li><li><span>05</span>Xuất kho</li><li><span>06</span>Hỗ trợ vận chuyển</li></ol>
+    <div class="apv-copy"><p>Mô hình này giúp doanh nghiệp giảm áp lực về diện tích kho, nhân sự vận hành và đầu tư cơ sở vật chất, đồng thời tăng khả năng kiểm soát hàng hóa trong chuỗi cung ứng.</p></div>
+  </div>
+</section>
+
+<section class="features" id="values">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow-line">Giá trị dành cho khách hàng</div><h2>Giải pháp phù hợp, quản lý xuyên suốt</h2></div>
+    <div class="tier"><div class="tier-label">01<span>An Phát Việt</span></div><div class="tier-body"><h3>Phù hợp với đặc tính hàng hóa</h3><p>Mỗi loại hàng hóa có những yêu cầu khác nhau. An Phát Việt hướng tới giải pháp lưu giữ dựa trên đặc tính hàng hóa và nhu cầu thực tế của từng doanh nghiệp.</p></div></div>
+<div class="tier"><div class="tier-label">02<span>An Phát Việt</span></div><div class="tier-body"><h3>Kiểm soát chặt chẽ</h3><p>Thông tin hàng hóa được quản lý xuyên suốt quá trình nhập kho – lưu giữ – xuất kho, hỗ trợ hạn chế sai lệch về số lượng, chủng loại và lô hàng.</p></div></div>
+<div class="tier"><div class="tier-label">03<span>An Phát Việt</span></div><div class="tier-body"><h3>Đặt an toàn là trọng tâm</h3><p>Đặc biệt chú trọng các yêu cầu về an toàn đối với hàng hóa có tính chất đặc thù và các yếu tố có thể phát sinh rủi ro trong quá trình lưu giữ.</p></div></div>
+<div class="tier"><div class="tier-label">04<span>An Phát Việt</span></div><div class="tier-body"><h3>Linh hoạt theo nhu cầu</h3><p>Cung cấp phương án lưu kho phù hợp với nhu cầu ngắn hạn, dài hạn hoặc theo từng lô hàng.</p></div></div>
+<div class="tier"><div class="tier-label">05<span>An Phát Việt</span></div><div class="tier-body"><h3>Đồng hành cùng chuỗi cung ứng</h3><p>Kết hợp lưu giữ, bốc xếp và các hoạt động hỗ trợ vận tải nhằm tạo ra giải pháp kho vận đồng bộ hơn cho doanh nghiệp.</p></div></div>
+  </div>
+</section>
+
+<section class="benefits" id="vision">
+  <div class="wrap">
+    <div class="apv-two">
+      <div class="benefit"><h3>Tầm nhìn</h3><p>Trở thành đơn vị cung cấp giải pháp kho vận và lưu giữ hàng hóa chuyên nghiệp, an toàn và đáng tin cậy tại Việt Nam, từng bước phát triển hệ thống dịch vụ đáp ứng nhu cầu ngày càng đa dạng của các doanh nghiệp sản xuất, thương mại và xuất nhập khẩu.</p></div>
+      <div class="benefit"><h3>Sứ mệnh</h3><p>Cung cấp giải pháp lưu giữ hàng hóa an toàn, chuyên nghiệp và hiệu quả; đồng hành cùng doanh nghiệp trong việc tối ưu hoạt động kho vận và nâng cao hiệu quả chuỗi cung ứng.</p></div>
+    </div>
+    <div class="apv-core"><h3>Giá trị cốt lõi</h3><p class="display">AN TOÀN – CHÍNH XÁC – CHUYÊN NGHIỆP – TẬN TÂM – ĐỒNG HÀNH</p><p>Đây là 5 giá trị làm nền tảng cho cách An Phát Việt tiếp cận khách hàng, tổ chức vận hành và phát triển dịch vụ.</p></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap"><div class="contact-card">
+    <div><h2>Trao đổi nhu cầu kho vận của bạn</h2><p>Chuẩn bị thông tin loại hàng, số lượng, quy cách đóng gói, thời gian lưu kho và yêu cầu bảo quản. Với hóa chất, vui lòng cung cấp thêm SDS và hồ sơ kỹ thuật liên quan để trao đổi phương án phù hợp.</p></div>
+    <div class="contact-details">
+      <div class="row"><span class="label">Đơn vị cung cấp dịch vụ</span><span class="value">CÔNG TY TNHH DỊCH VỤ KHO VẬN AN PHÁT VIỆT</span></div>
+      <!-- Thay thông tin chờ cập nhật bằng hotline, email và địa chỉ thật trước khi xuất bản. -->
+      <div class="row"><span class="label">Hotline</span><span class="value">Đang cập nhật</span></div>
+      <div class="row"><span class="label">Email</span><span class="value">Đang cập nhật</span></div>
+      <div class="row"><span class="label">Địa chỉ kho</span><span class="value">Đang cập nhật</span></div>
+    </div>
+  </div></div>
+</section>
+</main>
+<footer class="site-footer wrap"><div>© 2026 CÔNG TY TNHH DỊCH VỤ KHO VẬN AN PHÁT VIỆT</div><div>Giải pháp kho vận an toàn – chuyên nghiệp – hiệu quả</div></footer>
+</body>
+</html>
